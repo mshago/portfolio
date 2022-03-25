@@ -46,10 +46,10 @@ export default function Navbar() {
               <span className="sr-only">Open Menu</span>
               {!openDrawer ? (
                 <svg className="block h-8 w-8 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                  <path stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               )}
@@ -89,7 +89,7 @@ export default function Navbar() {
         leaveTo="opacity-0 scale-95"
         className=' flex-col w-full shadow'
       >
-          {(ref) => (
+          {(ref) =>
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col justify-center items-between">
                 <ul className="flex flex-col justify-between items-center list-none m-1">
@@ -111,7 +111,7 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-          )}
+          }
       </Transition>
     </div>
   )
