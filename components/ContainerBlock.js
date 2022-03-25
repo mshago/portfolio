@@ -8,8 +8,8 @@ export default function ContainerBlock({ children, ...customMeta }) {
   const router = useRouter();
 
   const meta = {
-    title: "Manu Arora - Developer, Writer, Creator and YouTuber",
-    description: `I've been developing websites for 5 years straight. Get in touch with me to know more.`,
+    title: "Miguel Luna",
+    descrition: '',
     image: "/avatar.png",
     type: "website",
     ...customMeta,
@@ -42,10 +42,8 @@ export default function ContainerBlock({ children, ...customMeta }) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <main className="dark:bg-gray-800 w-full">
-        <Navbar />
+      <main className=" w-full">
         <div>{children}</div>
-        <Footer />
       </main>
     </div>
   );

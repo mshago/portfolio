@@ -6,16 +6,18 @@ import LatestCode from "../components/LatestCode";
 import Hero from "../components/Hero";
 import getLatestRepos from "@lib/getLatestRepos";
 import userData from "@constants/data";
+import AboutMe from "@components/AboutMe";
+import Navbar from "@components/Navbar";
+import Footer from "@components/Footer";
 
 export default function Home({ repositories }) {
   return (
     <ContainerBlock
-      title="Manu Arora - Developer, Writer, Creator"
-      description="This is a template built specifically for my blog - Creating a developer portfolio that gets you a job."
+      title="Miguel Luna"
+      description=""
     >
-      <Hero />
-      <FavouriteProjects />
-      <LatestCode repositories={repositories} />
+      <Navbar/>
+      <Hero/>
     </ContainerBlock>
   );
 }

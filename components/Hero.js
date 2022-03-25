@@ -1,60 +1,26 @@
 import React from "react";
-import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
-import { RainbowHighlight } from "./RainbowHighlight";
 import userData from "@constants/data";
+import { Button } from "./Button";
+
 
 export default function Hero() {
   const colors = ["#F59E0B", "#84CC16", "#10B981", "#3B82F6"];
   return (
-    <div className="flex flex-row justify-center items-start overflow-hidden">
-      {/* Text container */}
 
-      <div className="w-full md:w-1/2 mx-auto text-center md:text-left lg:p-20">
-        <RoughNotationGroup show={true}>
-          <RainbowHighlight color={colors[0]}>
-            <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2">
-              Developer.
-            </h1>
-          </RainbowHighlight>
-          <RainbowHighlight color={colors[1]}>
-            <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2">
-              Designer.
-            </h1>
-          </RainbowHighlight>
-          <RainbowHighlight color={colors[2]}>
-            <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2">
-              Programmer.
-            </h1>
-          </RainbowHighlight>
-          <RainbowHighlight color={colors[3]}>
-            <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2">
-              Youtuber.
-            </h1>
-          </RainbowHighlight>
-        </RoughNotationGroup>
+    <div className="flex flex-row justify-center items-start overflow-hidden px-6 mt-12 pb-38">
+      <div className="flex flex-col w-full lg:w-6/12 px-12 md:px-24">
+        <h2 className="font-mono text-md mb-2 md:text-xl text-green-400">Hello there, I am</h2>
+        <h1 className="font-bold text-4xl mb-4 md:text-8xl text-gray-200">Miguel Luna.</h1>
+        <h1 className="font-bold text-4xl mb-3 md:text-6xl text-green-400">I like to messing around with things for fun.</h1>
+        <p className="my-6 mb-12 md:text-lg md:w-4/5 text-gray-400">every time i dive in my pool it's hard to be humble</p>
+        <div className="inline-block flex md:justify-start md:my-4">
+          <Button title='Connect with me' className={'text-lg px-7'}/>
+        </div>
       </div>
-      {/* Image container */}
-      <div className="hidden lg:block relative w-full md:w-1/2 -mr-40 mt-20">
-        <div className="w-3/4 ">
-          <img src={userData.avatarUrl} alt="avatar" className=" shadow" />
-          <div className="flex flex-row justify-between mt-4">
-            <div className="flex flex-row space-x-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                className="bi bi-arrow-90deg-up"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M4.854 1.146a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L4 2.707V12.5A2.5 2.5 0 0 0 6.5 15h8a.5.5 0 0 0 0-1h-8A1.5 1.5 0 0 1 5 12.5V2.707l3.146 3.147a.5.5 0 1 0 .708-.708l-4-4z"
-                />
-              </svg>
-              <p className="font-mono">That's me</p>
-            </div>
-          </div>
+
+      <div className="hidden lg:block md:w-5/12 px-20">
+        <div className="w-full h-full p-48 bg-white">
+          {/*<img src={userData.avatarUrl} alt="avatar" />*/}
         </div>
       </div>
     </div>
