@@ -2,24 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'fonts.css';
+@import "fonts.css";
 
+:root {
+  --main-bg-color: rgb(18, 18, 18);
+  --navbar-main-bg-color: rgba(18, 18, 18,0.994);
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Inter var', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Inter var", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   transition: 1s;
   scroll-behavior: smooth;
+  min-height: 100vh;
+  background-color: var(--main-bg-color);
 }
 
-ul li{
+ul li {
   margin: 0px 5px;
   font-size: 13px;
 }
 
-ul li:hover {
+.navbar ul li:hover {
   cursor: pointer;
 }
 
@@ -33,8 +39,9 @@ a {
   transition: all 0.25s;
 }
 
-a:hover, a:focus {
-  color: #64ffda;
+a:hover,
+a:focus {
+  color: rgb(52, 211, 153);
 }
 
 * {
@@ -42,9 +49,9 @@ a:hover, a:focus {
 }
 
 .resume-button {
-  color: #64ffda;
+  color: rgb(52, 211, 153);
   background-color: transparent;
-  border: 1px solid #64ffda;
+  border: 1px solid rgb(52, 211, 153);
   border-radius: 4px;
   padding: 0.75rem 1rem;
   line-height: 1;
@@ -53,17 +60,70 @@ a:hover, a:focus {
   font-size: 13px;
 }
 
-.bg-mainBlack {
-  background-color: rgb(18, 18, 18);
+.resume-button:hover,
+.resume-button:focus,
+.resume-button.active {
+  outline: none;
+  background-color: rgba(100, 255, 218, 0.1);
 }
 
-@media (min-width: 768px){
-  .resume-button{
+.experience-button {
+  color: rgb(156, 163, 175);
+  background-color: transparent;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.active-button {
+  outline: none;
+  /* background-color: rgba(36,36,36); */
+  color: rgb(52, 211, 153);
+}
+
+.experience-button:hover,
+.experience-button:focus,
+.experience-button.active {
+  outline: none;
+  background-color: rgba(36, 36, 36);
+  color: rgb(52, 211, 153);
+}
+
+.job-description li {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.job-description li::before {
+  content: "\2022";
+  color: rgb(52, 211, 153);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.bg-mainBlack {
+  background-color: var(--navbar-main-bg-color);
+}
+
+@media (min-width: 768px) {
+  .resume-button {
     margin-left: 15px;
   }
 }
 
-.resume-button:hover, .resume-button:focus, .resume-button.active {
-  outline: none;
-  background-color: rgba(100, 255, 218, 0.1);
+.hide {
+  opacity: 0;
+  transition-duration: 2000ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.project:hover + .hide {
+  opacity: 100;
+}
+
+.hide:hover {
+  opacity: 100;
 }
