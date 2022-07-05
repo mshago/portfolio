@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import React, { useState } from "react";
 import userData from "@constants/data";
 import { Transition } from "@headlessui/react";
 
 export default function Navbar() {
-  const router = useRouter();
+
   const [openDrawer, setOpenDrawer] = useState(false);
 
   return (
@@ -14,16 +13,9 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex flex-col">
             <a href="/">
-              <img className="logo" src="logo.png" width={45} />
-              {/* <h1 className="font-semibold text-xl text-green-400">
-                Miguel Luna
-              </h1>
-              <p className="text-base font-light text-gray-400 hidden md:flex">
-                {userData.designation}
-              </p> */}
+              <img className="logo w-8" src="logo.png" />
             </a>
           </div>
-
           <div className=" flex flex-col items-center md:hidden">
             {/* Mobile Menu Button Responsive */}
             <button
