@@ -24,8 +24,8 @@ export default function AboutMe() {
           </p>
           <p className="text-gray-300 mb-4">
             I love learning new and better ways to create the things I find interesting.
-            I'm always looking for oportunities to work with people willing to share their
-            knowledge and I can share mine too. My main goal have a team to create something that makes people's life easier.
+            I'm always looking for opportunities to work with people willing to share their
+            knowledge. My main goal is to have a team to create something that makes people's life easier.
           </p>
           
         </div>
