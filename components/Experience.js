@@ -1,5 +1,5 @@
 import userData from "@constants/data";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Section } from "./Section";
 
 export default function Experience() {
@@ -20,6 +20,7 @@ export default function Experience() {
                 <ExperienceButton
                   title={company}
                   key={index}
+                  index={index}
                   setCurrentCompany={setCurrentCompany}
                   currentCompany={currentCompany}
                 />
@@ -27,7 +28,7 @@ export default function Experience() {
             })}
           </div>
           <div className="h-auto w-2/3 px-8">
-            <ExperienceCard data={experience[currentCompany]} key={experience.findIndex((e) => e === experience[currentCompany])} />
+            <ExperienceCard data={experience[currentCompany]}/>
           </div>
         </div>
     </Section>
