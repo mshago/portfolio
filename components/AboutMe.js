@@ -17,8 +17,8 @@ export default function AboutMe() {
             there, I decided to go for a bachelor degree in IT.
           </p>
           <p className="text-gray-300 mb-4">
-            I have experience with building user interface and user experience, knowledge
-            with languages as Javascript (ES6), Typescript, HTML, CSS, Python, SQL. Right know
+            I have experience with building user interfaces and user experience, knowledge
+            of languages such as Javascript (ES6), Typescript, HTML, CSS, Python, SQL. Right now
             I'm using React.js and React-Native as development frameworks. I also have built 
             full-stack applications with Express.js and MongoDB.
           </p>
