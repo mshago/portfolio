@@ -13,8 +13,8 @@ export default function Contact() {
       </div>
       <div className="py-4 lg:w-2/3 m-auto">
         <div className="flex justify-center">
-          <p className="text-gray-300">
-            Want to say hi? Feel free to send me a message!
+          <p className="text-gray-300 text-center">
+            Want to say hi or want me to work with you/a team?<br/> Feel free to send me a message!
           </p>
         </div>
         <div className="flex justify-center py-6">

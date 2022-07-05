@@ -5,27 +5,22 @@ import { Transition } from "@headlessui/react";
 
 export default function Navbar() {
   const router = useRouter();
-  console.log(router.asPath);
-  const [mounted, setMounted] = useState(false);
   const [openDrawer, setOpenDrawer] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
-    <div className="flex flex-col items-center w-full bg-mainBlack sticky top-0 z-50">
+    <div className="flex flex-col items-center w-full bg-mainBlack sticky top-0 z-50 shadow-sm">
       <header className="flex flex-col items-center md:px-16 md:py-8 py-6 w-full px-6">
         <nav className="flex justify-between items-center w-full">
           {/* Logo */}
           <div className="flex flex-col">
-            <a>
-              <h1 className="font-semibold text-xl text-green-400">
+            <a href="/">
+              <img className="logo" src="logo.png" width={45} />
+              {/* <h1 className="font-semibold text-xl text-green-400">
                 Miguel Luna
               </h1>
               <p className="text-base font-light text-gray-400 hidden md:flex">
                 {userData.designation}
-              </p>
+              </p> */}
             </a>
           </div>
 
@@ -36,19 +31,18 @@ export default function Navbar() {
               type="button"
               className="inline-flex items-center 
               justify-center p-2 rounded-md text-gray-400 
-              focus:outline-none focus:ring-2 focus:ring-inset hover:bg-teal-700"
+              focus:outline-none hover:scale-110 ease-in-out duration-300 hover:text-green-400"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
               <span className="sr-only">Open Menu</span>
               {!openDrawer ? (
                 <svg
-                  className="block h-8 w-8 "
+                  className="block h-8 w-8 stroke-blue-100"
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor"
                   aria-hidden="true"
+                  stroke="currentColor"
                 >
                   <path
                     strokeLinecap="round"
@@ -60,8 +54,8 @@ export default function Navbar() {
               ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8"
-                  fill="none"
+                  className="h-8 w-8 hover:fill-green-600"
+                  fill="blue"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   strokeWidth="2"
@@ -101,7 +95,7 @@ export default function Navbar() {
               </li>
             </ul>
             <div>
-              <a className="resume-button">Resume</a>
+              <a className="resume-button" href="resume.pdf" target='_blank'>Resume</a>
             </div>
           </div>
         </nav>
@@ -148,7 +142,7 @@ export default function Navbar() {
                 </li>
               </ul>
               <div className="flex justify-center items-center">
-                <a className="resume-button">Resume</a>
+                <a className="resume-button" href="resume.pdf" target='_blank'>Resume</a>
               </div>
             </div>
           </div>

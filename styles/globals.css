@@ -6,7 +6,7 @@
 
 :root {
   --main-bg-color: rgb(18, 18, 18);
-  --navbar-main-bg-color: rgba(18, 18, 18,0.994);
+  --navbar-main-bg-color: rgba(18, 18, 18,0.993);
 }
 html,
 body {
@@ -126,4 +126,12 @@ a:focus {
 
 .hide:hover {
   opacity: 100;
+}
+
+.logo{
+  transition: all .3s ease-in-out;
+}
+
+.logo:hover{
+  transform: scale(1.05);
 }

@@ -6,7 +6,7 @@ export default function AboutMe() {
     <Section id={"aboutMe"} title={"About Me"}>
       <div className="inner flex flex-col justify-center">
         <div className="w-52 h-auto m-auto">
-          <img src="/avatar.jpg" alt="avatar" />
+          <img src="/avatar2.jpg" alt="avatar" />
         </div>
         <div className="w-full py-4" />
         <div className="lg:w-2/3 m-auto">
