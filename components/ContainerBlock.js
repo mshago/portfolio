@@ -3,18 +3,15 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 export default function ContainerBlock({ children, ...customMeta }) {
-
   const router = useRouter();
 
   const meta = {
     title: "Miguel Luna",
-    descrition: '',
+    descrition: "",
     image: "/avatar2.jpg",
     type: "website",
     ...customMeta,
   };
-
-
 
   return (
     <div>
@@ -29,7 +26,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
           rel="canonical"
           href={`https://yourwebsite.com${router.asPath}`}
         />
-        <link rel="icon" href="favicon.png"/>
+        <link rel="icon" href="favicon.png" />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Miguel Luna" />
         <meta property="og:description" content={meta.description} />
@@ -44,7 +41,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <main className="bg-mainBlack w-full">
+      <main className="w-full">
         <div>{children}</div>
       </main>
     </div>

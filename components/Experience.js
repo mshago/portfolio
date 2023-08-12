@@ -12,34 +12,43 @@ export default function Experience() {
   const [currentCompany, setCurrentCompany] = useState(0);
 
   return (
-    <Section id={"experience"} title='Experience'>
-        <div className="flex xl:w-3/4 m-auto">
-          <div className="flex flex-col align-start left w-1/3">
-            {companies.map((company, index) => {
-              return (
-                <ExperienceButton
-                  title={company}
-                  key={index}
-                  index={index}
-                  setCurrentCompany={setCurrentCompany}
-                  currentCompany={currentCompany}
-                />
-              );
-            })}
-          </div>
-          <div className="h-auto w-2/3 px-8">
-            <ExperienceCard data={experience[currentCompany]}/>
-          </div>
+    <Section id={"experience"} title="Experience">
+      <div className="flex xl:w-3/4 m-auto">
+        <div className="flex flex-col align-start left w-1/3">
+          {companies.map((company, index) => {
+            return (
+              <ExperienceButton
+                title={company}
+                key={index}
+                index={index}
+                setCurrentCompany={setCurrentCompany}
+                currentCompany={currentCompany}
+              />
+            );
+          })}
         </div>
+        <div className="h-auto w-2/3 px-8">
+          <ExperienceCard data={experience[currentCompany]} />
+        </div>
+      </div>
     </Section>
   );
 }
 
-const ExperienceButton = ({ title, index, setCurrentCompany,currentCompany }) => {
+const ExperienceButton = ({
+  title,
+  index,
+  setCurrentCompany,
+  currentCompany,
+}) => {
   return (
     <button
       onClick={() => setCurrentCompany(index)}
-      className={index === currentCompany?"experience-button active-button":'experience-button'}
+      className={
+        index === currentCompany
+          ? "experience-button active-button"
+          : "experience-button"
+      }
     >
       <span>{title}</span>
     </button>
@@ -60,7 +69,11 @@ const ExperienceCard = ({
         <ul className="job-description">
           {Array.isArray(desc) ? (
             desc.map((item, key) => {
-              return <li className="text-gray-300" key={key}>{item}</li>;
+              return (
+                <li className="text-gray-300" key={key}>
+                  {item}
+                </li>
+              );
             })
           ) : (
             <li className="text-gray-300">{desc}</li>

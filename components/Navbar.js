@@ -3,11 +3,10 @@ import userData from "@constants/data";
 import { Transition } from "@headlessui/react";
 
 export default function Navbar() {
-
   const [openDrawer, setOpenDrawer] = useState(false);
 
   return (
-    <div className="flex flex-col items-center w-full bg-mainBlack sticky top-0 z-50 shadow-sm">
+    <div className="flex flex-col items-center w-full bg-another-one sticky top-0 z-50 shadow-sm">
       <header className="flex flex-col items-center md:px-16 md:py-8 py-6 w-full px-6">
         <nav className="flex justify-between items-center w-full">
           {/* Logo */}
@@ -87,7 +86,9 @@ export default function Navbar() {
               </li>
             </ul>
             <div>
-              <a className="resume-button" href="resume.pdf" target='_blank'>Resume</a>
+              <a className="resume-button" href="resume.pdf" target="_blank">
+                Resume
+              </a>
             </div>
           </div>
         </nav>
@@ -121,7 +122,7 @@ export default function Navbar() {
                 </li>
                 <li className="my-4">
                   <a className="text-gray-400 text-lg" href="#projects">
-                    My Projects 
+                    My Projects
                   </a>
                 </li>
                 <li className="my-4">
@@ -134,7 +135,9 @@ export default function Navbar() {
                 </li>
               </ul>
               <div className="flex justify-center items-center">
-                <a className="resume-button" href="resume.pdf" target='_blank'>Resume</a>
+                <a className="resume-button" href="resume.pdf" target="_blank">
+                  Resume
+                </a>
               </div>
             </div>
           </div>

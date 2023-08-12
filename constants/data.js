@@ -2,9 +2,10 @@ export const userData = {
   githubUsername: "mshago",
   name: "Miguel Luna",
   designation: "Front-End Developer",
-  avatarUrl: "/professionapicture.jpg",
+  picture: "/avatar.jpg",
   email: "mlunav99@gmail.com",
-  address: "USA",
+  address: "MX",
+  projectsDescription: "",
   projects: [
     {
       title: "This Portfolio",
@@ -16,19 +17,41 @@ export const userData = {
       link: "https://github.com/mshago/react-gifexpertapp",
       imgUrl: "/gifsearch.png",
     },
+    {
+      title: "Pokedex App",
+      link: "https://github.com/mshago/pokedex",
+      imgUrl: "/portfolio1.png",
+    },
+    {
+      title: "Posts App",
+      link: "https://github.com/mshago/posts",
+      imgUrl: "/portfolio1.png",
+    },
   ],
   about: {
     title: "I mess around with things for fun.",
-    description:
-      "I'm a junior mobile and web developer with solid knowledge in JavaScript using React.js and React-Native. ",
+    smallDescription:
+      "I'm a mobile and web developer with solid knowledge in JavaScript using React.js and React-Native. ",
     currentProject: "",
     currentProjectUrl: "",
   },
   experience: [
     {
+      title: "React Native Developer",
+      company: "Softtek",
+      date: "Sep 2022 - Present",
+      companyLink: "https://www.softtek.com/",
+      desc: [
+        "Maintenance of mobile applications developed with React Native, Javascript, Typescript, and Redux.",
+        "Lead and work with a small team of developers.",
+        "Collaborate with Product Owners and Tech Leads to improve the existing app and reduce the error rate.",
+        "Code review and analyze merge requests.",
+      ],
+    },
+    {
       title: "12-Week Immersive React-Native Training Program",
       company: "Quintrix Solutions",
-      date: "Mar 2022 - May 2022",
+      date: "Mar 2022 - Jun 2022",
       companyLink: "https://www.quintrixsolutions.com/",
       desc: [
         "Developed mobile applications using React Native, TypeScript, and JavaScript.",
@@ -81,10 +104,10 @@ export default userData;
 const userDataEs = {
   githubUsername: "mshago",
   name: "Miguel Luna",
-  designation: "Front-End Developer",
-  avatarUrl: "/professionapicture.jpg",
+  designation: "Desarrollador Móvil",
+  avatarUrl: "/avatar.jpg",
   email: "mlunav99@gmail.com",
-  address: "USA",
+  address: "MX",
   projects: [
     {
       title: "Este Portfolio",

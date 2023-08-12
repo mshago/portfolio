@@ -22,7 +22,7 @@ export default function Projects() {
 
 const ProjectCard = ({ title, link, imgUrl }) => {
   return (
-    <a href={link} target='_blank'  className="w-full block shadow-lg">
+    <a href={link} target="_blank" className="w-full block shadow-lg">
       <div className="relative overflow-hidden">
         <div className="h-72 object-cover">
           <img
@@ -30,9 +30,9 @@ const ProjectCard = ({ title, link, imgUrl }) => {
             alt="portfolio"
             className="project transform hover:scale-125 transition duration-2000 ease-out object-cover h-full w-full"
           />
-            <h1 className="absolute hide bg-green-500 bottom-10 left-10 text-gray-50 font-bold text-xl rounded-sm px-2">
-              {title}
-            </h1>
+          <h1 className="absolute hide bg-green-500 bottom-10 left-10 text-gray-50 font-bold text-xl rounded-sm px-2">
+            {title}
+          </h1>
         </div>
       </div>
     </a>
