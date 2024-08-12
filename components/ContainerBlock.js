@@ -1,15 +1,19 @@
-import React from "react";
-import Head from "next/head";
-import { useRouter } from "next/router";
+import React from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { DM_Sans } from 'next/font/google';
+const dm_sans = DM_Sans({
+  subsets: ['latin'],
+});
 
 export default function ContainerBlock({ children, ...customMeta }) {
   const router = useRouter();
 
   const meta = {
-    title: "Miguel Luna",
-    descrition: "",
-    image: "/avatar2.jpg",
-    type: "website",
+    title: 'Miguel Luna',
+    descrition: '',
+    image: '/avatar2.jpg',
+    type: 'website',
     ...customMeta,
   };
 
@@ -41,7 +45,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <main className="w-full">
+      <main className={` ${dm_sans.className} w-full`}>
         <div>{children}</div>
       </main>
     </div>

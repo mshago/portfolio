@@ -2,18 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "fonts.css";
-
 :root {
   --main-bg-color: rgb(18, 18, 18);
-  --navbar-main-bg-color: rgba(18, 18, 18,0.993);
+  --navbar-main-bg-color: rgba(18, 18, 18, 0.993);
 }
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Inter var", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   transition: 1s;
   scroll-behavior: smooth;
   min-height: 100vh;
@@ -97,7 +93,7 @@ a:focus {
 }
 
 .job-description li::before {
-  content: "\2022";
+  content: '\2022';
   color: rgb(52, 211, 153);
   display: inline-block;
   width: 1em;
@@ -128,10 +124,10 @@ a:focus {
   opacity: 100;
 }
 
-.logo{
-  transition: all .3s ease-in-out;
+.logo {
+  transition: all 0.3s ease-in-out;
 }
 
-.logo:hover{
+.logo:hover {
   transform: scale(1.05);
 }
