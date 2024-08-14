@@ -1,5 +1,5 @@
 export const descriptions = [
-  'ChatGPT, plase introduce me.',
+  'ChatGPT, please introduce me.',
   'Computing for fun.',
   'I am a software developer.',
   'Certified Software Developer, certified Mexican.',
@@ -47,4 +47,19 @@ export const descriptions = [
   'I am a software developer, not a superhero.',
   'やれやれだぜ.',
   'Turn up the volume, it is time to code.',
+  'Jarvis, pongase a trabajar.',
+  'Cool, cool, cool, cool, cool. No doubt, no doubt, no doubt.',
+  'Oh my god, they killed Kenny!',
+  'I am the coder who codes.',
+  'Are you coding, son?',
+  'Are you talking to me?',
+  'To the batmobile!',
+  'Bat-tastic!',
+  'Estoy listo, ascenso, tururu, ascenso.',
+  `If you don't take risks, you can't
+create a future.`,
+  'Oh, hi Mark.',
+  'I want to be a cowboy, baby.',
+  'YEET',
+  'Road work ahead? Uh, yeah, I sure hope it does.',
 ];
