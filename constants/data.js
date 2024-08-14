@@ -47,7 +47,7 @@ export const userData = {
     },
   ],
   about: {
-    title: 'I mess around with things.',
+    title: 'Alexa, reproduce el triste de Jose Jose',
     smallDescription:
       "I'm a mobile and web developer with solid knowledge in JavaScript using React.js and React-Native. ",
     currentProject: '',
