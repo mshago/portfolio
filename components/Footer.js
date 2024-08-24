@@ -6,6 +6,7 @@ import {
   LinkedInIcon,
   SpotifyIcon,
   TwitterIcon,
+  YoutubeIcon,
 } from './Icons';
 
 export default function Footer() {
@@ -13,24 +14,19 @@ export default function Footer() {
     <div>
       <div className="max-w-6xl mx-auto px-4 py-10 md:pt-20">
         <div className="flex flex-col items-center justify-between">
-          <div className="w-1/2 flex justify-evenly pb-12 lg:w-1/4">
+          <div className="w-1/2 flex justify-evenly pb-12 lg:w-1/4 ">
             <a
               href={userData.socialLinks.instagram}
               target="_blank"
-              className="text-base font-normal text-gray-600 dark:text-gray-300"
+              aria-label="Instagram"
+              className="text-base font-normal text-gray-600 dark:text-gray-300 flex text-center"
             >
               <InstagramIcon />
             </a>
             <a
-              href={userData.socialLinks.twitter}
-              target="_blank"
-              className="text-base font-normal text-gray-600 dark:text-gray-300"
-            >
-              <TwitterIcon />
-            </a>
-            <a
               href={userData.socialLinks.linkedin}
               target="_blank"
+              aria-label="LinkedIn"
               className="text-base font-normal text-gray-600 dark:text-gray-300"
             >
               <LinkedInIcon />
@@ -38,6 +34,7 @@ export default function Footer() {
             <a
               href={userData.socialLinks.github}
               target="_blank"
+              aria-label="Github"
               className="text-base font-normal text-gray-600 dark:text-gray-300"
             >
               <GithubIcon />
@@ -45,9 +42,18 @@ export default function Footer() {
             <a
               href={userData.socialLinks.spotify}
               target="_blank"
+              aria-label="Spotify"
               className="text-base font-normal text-gray-600 dark:text-gray-300"
             >
               <SpotifyIcon />
+            </a>
+            <a
+              href={userData.socialLinks.youtube}
+              target="_blank"
+              aria-label="Youtube"
+              className="text-base font-normal text-gray-600 dark:text-gray-300 text-center"
+            >
+              <YoutubeIcon />
             </a>
           </div>
           <p className="text-sm text-gray-200">

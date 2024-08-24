@@ -45,7 +45,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <main className={` ${dm_sans.className} w-full`}>
+      <main className={` ${dm_sans.className} w-full`} lang="en">
         <div>{children}</div>
       </main>
     </div>

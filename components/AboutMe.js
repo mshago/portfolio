@@ -6,17 +6,8 @@ import Image from 'next/image';
 export default function AboutMe() {
   return (
     <Section id={'aboutMe'} title={'About Me'}>
-      <div className="flex flex-row">
-        <div className="w-full h-auto">
-          <Image
-            src={userData.picture}
-            alt="user_image"
-            width={2685}
-            height={2685}
-            className="rounded-sm"
-          />
-        </div>
-        <div className="lg:w-2/3 mx-5">
+      <div className="flex-col md:flex-row">
+        <div className="my-5 lg:my-0 md:w-1/2 lg:mx-5 text-justify">
           <p className="text-gray-300 mb-4">
             Hey there! I'm {userData.name}, a passionate software developer
             based in{' '}
@@ -35,7 +26,17 @@ export default function AboutMe() {
             life easier.
           </p>
         </div>
-        <div></div>
+        <div className="hidden md:flex justify-start items-start w-1/2">
+          <div className="md:px-10 md:py-5">
+            <Image
+              src={userData.picture}
+              alt="user_image"
+              width={2685}
+              height={2685}
+              className="rounded-md w-full h-full object-contain"
+            />
+          </div>
+        </div>
       </div>
     </Section>
   );

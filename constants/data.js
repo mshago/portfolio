@@ -16,12 +16,12 @@ export const userData = {
       techStack: ['React Native', 'Expo', 'React Navigation'],
     },
     {
-      title: 'This Portfolio',
-      link: '',
-      imgUrl: '/portfolio1.png',
+      title: 'Current Song Widget',
+      link: 'https://current-song-widget.vercel.app/',
+      imgUrl: '/currentsong.png',
       description:
-        'This portfolio was built using Next.js, Tailwind CSS, and deployed with Vercel.',
-      techStack: ['Next.js', 'Tailwind CSS', 'Vercel'],
+        'A simple widget that displays the current song playing on Spotify, Youtube Music, Soundcloud with LastFM API.',
+      techStack: ['JavaScript', 'CSS', 'LastFM API'],
     },
     {
       title: 'React Gif App',
@@ -108,6 +108,7 @@ export const userData = {
     linkedin: 'https://www.linkedin.com/in/miguel-luna-24ba26172',
     github: 'https://github.com/mshago',
     spotify: 'https://open.spotify.com/user/iam7hiago',
+    youtube: 'https://www.youtube.com/@mshago',
   },
 };
 

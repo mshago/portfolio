@@ -12,9 +12,10 @@ export const ProjectCard = ({
     <li className="list-none shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-lg hover:bg-gray-500 hover:bg-opacity-5 duration-500 flex flex-col">
       <div className="flex-grow flex flex-col justify-between">
         <div className="flex flex-grow">
-          <div className="w-1/2 p-4">
+          <div className="w-full md:w-1/2 p-4">
             <h3 className="text-gray-300 font-semibold text-base">
               <a
+                aria-label={title}
                 className="hover:cursor-pointer"
                 target="_blank"
                 href={link}
@@ -30,11 +31,12 @@ export const ProjectCard = ({
               {description}
             </p>
           </div>
-          <div className="relative w-1/2 max-h-52 overflow-hidden flex justify-center items-center">
+          <div className="hidden relative w-1/2 h-[200px] overflow-hidden md:flex justify-center items-center">
             <img
+              l
               src={imgUrl}
               alt={`${title} screenshot`}
-              className="object-cover w-full h-full"
+              className="object-cover"
               style={{ objectPosition: 'center' }}
             />
           </div>
