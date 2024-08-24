@@ -1,4 +1,5 @@
 import { LinkIcon } from './Icons';
+import Image from 'next/image';
 import { Tag } from './Tag';
 
 export const ProjectCard = ({
@@ -32,12 +33,11 @@ export const ProjectCard = ({
             </p>
           </div>
           <div className="hidden relative w-1/2 h-[200px] overflow-hidden md:flex justify-center items-center">
-            <img
-              l
+            <Image
               src={imgUrl}
               alt={`${title} screenshot`}
+              fill
               className="object-cover"
-              style={{ objectPosition: 'center' }}
             />
           </div>
         </div>

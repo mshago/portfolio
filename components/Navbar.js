@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import userData from '@constants/data';
 import { Transition } from '@headlessui/react';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -12,7 +13,14 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex flex-col">
             <a href="/">
-              <img className="logo w-8 h-8" src="logo.png" alt="logo" />
+              <Image
+                className="logo w-8 h-8"
+                src="/logo.png"
+                alt="logo"
+                width={32}
+                height={32}
+                priority
+              />
             </a>
           </div>
           <div className=" flex flex-col items-center md:hidden">

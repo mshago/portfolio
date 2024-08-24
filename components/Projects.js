@@ -6,7 +6,7 @@ import { ProjectCard } from './ProjectCard';
 export default function Projects() {
   return (
     <Section title="Projects" id="projects">
-      <ul className="max-w-6xl mx-auto grid grid-cols-1 gap-8 py-20 pb-40">
+      <ul className="max-w-6xl mx-auto grid grid-cols-1 gap-8 pb-40">
         {userData.projects.map((project, idx) => (
           <ProjectCard
             key={idx}

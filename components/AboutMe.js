@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function AboutMe() {
   return (
     <Section id={'aboutMe'} title={'About Me'}>
-      <div className="flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row">
         <div className="my-5 lg:my-0 md:w-1/2 lg:mx-5 text-justify">
           <p className="text-gray-300 mb-4">
             Hey there! I'm {userData.name}, a passionate software developer
