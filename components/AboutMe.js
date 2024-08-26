@@ -7,7 +7,7 @@ export default function AboutMe() {
   return (
     <Section id={'aboutMe'} title={'About Me'}>
       <div className="flex flex-col md:flex-row">
-        <div className="my-5 lg:my-0 md:w-1/2 lg:mx-5 text-justify">
+        <div className="my-5 lg:my-0 md:w-1/2 lg:mx-5">
           <p className="text-gray-300 mb-4">
             Hey there! I'm {userData.name}, a passionate software developer
             based in{' '}

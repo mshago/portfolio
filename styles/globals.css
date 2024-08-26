@@ -89,7 +89,7 @@ a:focus {
 
 .job-description li {
   font-size: 14px;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 
 .job-description li::before {

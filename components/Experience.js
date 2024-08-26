@@ -1,6 +1,8 @@
-import userData from "@constants/data";
-import React, { useState } from "react";
-import { Section } from "./Section";
+import userData from '@constants/data';
+import React, { useState } from 'react';
+import { Section } from './Section';
+import { Tag } from './Tag';
+import { ExperienceCardMobile, ExperienceCard } from './ExperienceCards';
 
 export default function Experience() {
   const companies = userData.experience.map((item) => {
@@ -12,9 +14,9 @@ export default function Experience() {
   const [currentCompany, setCurrentCompany] = useState(0);
 
   return (
-    <Section id={"experience"} title="Experience">
+    <Section id={'experience'} title="Experience">
       <div className="flex xl:w-3/4 m-auto">
-        <div className="flex flex-col align-start left w-1/3">
+        <div className="hidden md:flex flex-col align-start left w-1/3">
           {companies.map((company, index) => {
             return (
               <ExperienceButton
@@ -27,8 +29,21 @@ export default function Experience() {
             );
           })}
         </div>
-        <div className="h-auto w-2/3 px-8">
+        <div className="hidden md:flex h-auto w-2/3 px-8">
           <ExperienceCard data={experience[currentCompany]} />
+        </div>
+        <div className="md:hidden flex flex-col w-full">
+          <ul>
+            {experience.map((exp, index) => {
+              return (
+                <ExperienceCardMobile
+                  data={exp}
+                  key={index}
+                  companyLink={companies[index]}
+                />
+              );
+            })}
+          </ul>
         </div>
       </div>
     </Section>
@@ -46,40 +61,11 @@ const ExperienceButton = ({
       onClick={() => setCurrentCompany(index)}
       className={
         index === currentCompany
-          ? "experience-button active-button"
-          : "experience-button"
+          ? 'experience-button active-button'
+          : 'experience-button'
       }
     >
       <span>{title}</span>
     </button>
-  );
-};
-
-const ExperienceCard = ({
-  data: { title = "a", desc, date = "a" },
-  companyLink,
-}) => {
-  return (
-    <div>
-      <h1 className="font-semibold text-xl text-green-400">{title}</h1>
-      <p href={companyLink} className="text-gray-300 text-xs my-1">
-        {date}
-      </p>
-      <div className="py-4">
-        <ul className="job-description">
-          {Array.isArray(desc) ? (
-            desc.map((item, key) => {
-              return (
-                <li className="text-gray-300" key={key}>
-                  {item}
-                </li>
-              );
-            })
-          ) : (
-            <li className="text-gray-300">{desc}</li>
-          )}
-        </ul>
-      </div>
-    </div>
   );
 };
