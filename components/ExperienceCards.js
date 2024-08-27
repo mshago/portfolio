@@ -6,7 +6,7 @@ export const ExperienceCardMobile = ({
   companyLink,
 }) => {
   return (
-    <li className="mb-8 list-none shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-lg hover:bg-gray-500 hover:bg-opacity-5 duration-500 flex flex-col">
+    <li className="mb-8 list-none rounded-lg overflow-hidden transition-transform transform shadow-lg bg-gray-500 bg-opacity-5 duration-500 flex flex-col">
       <div className="flex-grow flex flex-col justify-between">
         <div className="flex flex-grow">
           <div className="w-full md:w-1/2 p-4">
