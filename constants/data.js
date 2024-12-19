@@ -8,6 +8,14 @@ export const userData = {
   projectsDescription: '',
   projects: [
     {
+      title: 'Memory Game',
+      link: 'https://github.com/mshago/memory-game',
+      imgUrl: '/memory-game-v2.png',
+      description:
+        'A simple memory game I built in highschool using React with TypeScript',
+      techStack: ['HTML', 'CSS', 'TypeScript', 'React'],
+    },
+    {
       title: 'Metacritic App',
       link: 'https://github.com/mshago/metacritic-app',
       imgUrl: '/metacritic.png',
@@ -36,14 +44,6 @@ export const userData = {
       imgUrl: '/portfolio1.png',
       description: 'A simple Pokedex app built with React Native.',
       techStack: ['React Native', 'Expo', 'React Navigation', 'PokeAPI'],
-    },
-    {
-      title: 'Memory Game',
-      link: 'https://github.com/mshago/',
-      imgUrl: '/memorygame.png',
-      description:
-        'A simple memory game I built in highschool using HTML, CSS and Vanilla JavaScript.',
-      techStack: ['HTML', 'CSS', 'JavaScript'],
     },
   ],
   about: {
